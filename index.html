@@ -12,14 +12,96 @@
             <kbd>A</kbd>
             <span class="sound">clap</span>
         </div>
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound"></span>
+        </div>
     </div>
-
-    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <div class = "keys">
+        <div data-key="90" class="key">
+            <kbd>Z</kbd>
+            <span class="sound">clap</span>
+        </div>
+        <div data-key="88" class="key">
+            <kbd>X</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="67" class="key">
+            <kbd>C</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="86" class="key">
+            <kbd>V</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="66" class="key">
+            <kbd>B</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="78" class="key">
+            <kbd>N</kbd>
+            <span class="sound"></span>
+        </div>
+        <div data-key="77" class="key">
+            <kbd>M</kbd>
+            <span class="sound"></span>
+        </div>
+    </div>
+ 
+    <audio data-key="65" src="sounds/A2A3.wav"></audio>
+    <audio data-key="83" src="sounds/A3.wav"></audio>
+    <audio data-key="68" src="sounds/B2.wav"></audio>
+    <audio data-key="70" src="sounds/B3.wav"></audio>
+    <audio data-key="71" src="sounds/B3B4.wav"></audio>
+    <audio data-key="72" src="sounds/B4.wav"></audio>
+    <audio data-key="74" src="sounds/C3.wav"></audio>
+    <audio data-key="75" src="sounds/C3C4.wav"></audio>
+    <audio data-key="76" src="sounds/C4.wav"></audio>
+    <audio data-key="90" src="sounds/D3.wav"></audio>
+    <audio data-key="88" src="sounds/D4.wav"></audio>
+    <audio data-key="67" src="sounds/D5.wav"></audio>
+    <audio data-key="86" src="sounds/E2.wav"></audio>
+    <audio data-key="66" src="sounds/E4.wav"></audio>
+    <audio data-key="78" src="sounds/F2.wav"></audio>
+    <audio data-key="77" src="sounds/F2F3.wav"></audio>
 
 <script>
     window.addEventListener('keydown', function(e) {
-        console.log(e.key, e.keyCode);
-    })
+        console.log(e);
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"`);
+        if (!audio) return;
+        audio.currentTime = 0;
+        audio.play();
+        
+    });
 </script>
 
 </body>
