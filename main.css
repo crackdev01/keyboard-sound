@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+}
+
+canvas {
+    position: absolute;
+}
+
+.body {
+    position: relative;
+}
+
+.main {
+    /* z-index: auto; */
+    padding-top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.key-row {
+    /* z-index: auto; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: .5em;
+    width: 80%;
+}
+
+.key {
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em 0;
+    width: 50px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: white;
+    transition: all .07s;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
